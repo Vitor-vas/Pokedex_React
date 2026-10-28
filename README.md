@@ -72,8 +72,3 @@ src/
 ├── App.jsx                # estados, filtros e composição dos componentes
 └── main.jsx
 ```
-
-## 👥 Dupla
-
-- _Nome 1_
-- _Nome 2_

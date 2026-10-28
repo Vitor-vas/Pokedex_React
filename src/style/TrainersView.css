@@ -1,0 +1,74 @@
+.trainers {
+  margin-top: 12px;
+  padding: 14px;
+  border: 3px solid var(--cell-border);
+  border-radius: 10px;
+  background: var(--panel);
+}
+.trainers__title {
+  margin-bottom: 12px;
+}
+
+.trainers__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.trainer-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border: 3px solid var(--cell-border);
+  border-radius: 10px;
+  background: var(--cell);
+}
+.trainer-card header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trainer-card h3 {
+  font-size: 1rem;
+}
+.trainer-card__badges {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #3b2a00;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.trainer-card__count {
+  font-size: 0.7rem;
+  color: var(--text-soft);
+}
+
+.trainer-card__team {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+  gap: 6px;
+}
+.trainer-card__team button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 4px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: var(--panel);
+  font-size: 0.6rem;
+}
+.trainer-card__team button:hover {
+  border-color: var(--frame);
+}
+.trainer-card__team img {
+  width: 56px;
+  height: 56px;
+  image-rendering: pixelated;
+}
+.trainer-card__team small {
+  color: var(--text-soft);
+}

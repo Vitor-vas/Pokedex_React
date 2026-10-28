@@ -1,0 +1,51 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filters__types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Botão de tipo; a cor vem da variável --chip-color definida no JSX. */
+.chip {
+  --chip-color: var(--text-soft);
+  padding: 4px 9px;
+  border: 2px solid var(--chip-color);
+  border-radius: 999px;
+  background: transparent;
+  font-size: 0.66rem;
+  font-weight: 700;
+  transition: background 0.15s, color 0.15s;
+}
+.chip:hover {
+  background: color-mix(in srgb, var(--chip-color) 30%, transparent);
+}
+.chip.is-active {
+  background: var(--chip-color);
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.filters__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.filters__sort {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+}
+.filters__sort select {
+  padding: 5px 8px;
+  border: 2px solid var(--cell-border);
+  border-radius: 8px;
+  background: var(--cell);
+}

@@ -1,16 +1,79 @@
-# React + Vite
+# 🎮 Pokédex React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Pokédex interativa feita com **React + Vite** para a Atividade 03 (Pair Programming).
+O visual segue o estilo clássico de Pokédex: moldura vermelha, painéis em tons de azul-turquesa e fonte pixelada.
 
-Currently, two official plugins are available:
+## ✨ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🐾 Lista com os 151 Pokémon (ID, nome, tipos, HP, Atk, Def, Sp.Atk, Sp.Def e Speed em cada card)
+- 🔎 Pesquisa por **nome** ou **ID** em tempo real
+- 🧬 Filtro por tipo (botões gerados a partir do `pokedex-data.json`)
+- 📄 Painel de detalhes com barras de atributos animadas, total e treinadores que possuem o Pokémon
+- 🧑‍🚀 Tela de **Treinadores** (nome, insígnias e time; clicar em um Pokémon abre ele na Pokédex)
+- ⚠️ Tratamento de "nenhum Pokémon encontrado"
+- ⭐ Favoritos (salvos no `localStorage`)
+- ⚔️ Comparação entre dois Pokémon
+- 📊 Ordenação por HP, Attack, Defense, Special Attack, Special Defense, Speed, Nome e ID
+- 🎲 Pokémon aleatório
+- 🌙 Dark mode (salvo no `localStorage`)
+- 📱 Layout responsivo (desktop, tablet e smartphone)
 
-## React Compiler
+## ▶️ Como executar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the Oxlint configuration
+Abra no navegador: **http://localhost:5173**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+> Requer Node.js 20.19+ ou 22.12+.
+
+## 📦 Dependências adicionais
+
+- [`motion`](https://motion.dev) — animações (`import { motion } from "motion/react"`)
+
+## 📁 Dados
+
+Os dados ficam em `src/data/pokedex-data.json` (Pokémon, tipos e treinadores) e são importados diretamente pelo `App.jsx`.
+
+## 🖼️ Imagens (fonte externa)
+
+As imagens dos Pokémon vêm do repositório público de sprites da **PokéAPI**:
+`https://github.com/PokeAPI/sprites`
+
+- Cards: `sprites/pokemon/{id}.png`
+- Detalhes e comparação: `sprites/pokemon/other/official-artwork/{id}.png`
+
+Os dados da aplicação continuam vindo apenas do `pokedex-data.json`. Sem internet, tudo funciona, apenas sem as imagens.
+
+## 🧩 Organização do projeto
+
+```text
+src/
+├── assets/image/          # imagens locais (opcional)
+├── components/
+│   ├── Header.jsx         # título, abas, contadores e tema
+│   ├── SearchBar.jsx      # campo de pesquisa
+│   ├── Filters.jsx        # tipo, ordenação, favoritos e aleatório
+│   ├── PokemonList.jsx    # grade de cards (+ estado vazio)
+│   ├── PokemonCard.jsx    # card de um Pokémon
+│   ├── PokemonDetails.jsx # painel de detalhes
+│   ├── StatBar.jsx        # barra de atributo
+│   ├── TypeBadge.jsx      # etiqueta de tipo
+│   ├── TrainersView.jsx   # tela de treinadores
+│   ├── CompareTray.jsx    # barra de seleção para comparar
+│   ├── CompareModal.jsx   # modal de comparação
+│   └── EmptyState.jsx     # mensagem de "nada encontrado"
+├── data/pokedex-data.json
+├── hooks/useLocalStorage.js
+├── style/                 # um CSS por componente + index.css (tema) e App.css (layout)
+├── utils/                 # typeColors.js e pokemon.js (funções auxiliares)
+├── App.jsx                # estados, filtros e composição dos componentes
+└── main.jsx
+```
+
+## 👥 Dupla
+
+- _Nome 1_
+- _Nome 2_

@@ -1,0 +1,46 @@
+.compare-tray {
+  position: fixed;
+  left: 50%;
+  bottom: 14px;
+  z-index: 30;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: max-content;
+  max-width: calc(100vw - 20px);
+  translate: -50% 0;
+  padding: 10px 14px;
+  border: 3px solid var(--frame-dark);
+  border-radius: 12px;
+  background: var(--panel);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  font-size: 0.75rem;
+}
+.compare-tray ul {
+  display: flex;
+  gap: 8px;
+}
+.compare-tray li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--cell);
+}
+.compare-tray img {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+}
+.compare-tray li button {
+  border: none;
+  background: transparent;
+  color: var(--text-soft);
+}
+.compare-tray__actions {
+  display: flex;
+  gap: 6px;
+}

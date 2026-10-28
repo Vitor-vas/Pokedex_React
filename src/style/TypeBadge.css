@@ -1,0 +1,13 @@
+.type-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+}
+.type-badge--sm {
+  padding: 2px 6px;
+  font-size: 0.55rem;
+}
